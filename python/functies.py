@@ -21,5 +21,54 @@ def aantalwoord(naam, nummer):
 #aantalwoord("Hello World", 2)
 
 
+def kerstboom(string):
+    for i in range(len(string)):
+        a = i + 1
+        word = string[i] * a
+        print(word)
+
+
+
+
+
+#kerstboom("qwerty")
+
+
+def r5():
+    return 5
+
+#print(r5())
+
+def r5maali(i):
+    return 5*i
+
+#print(r5maali(3))
+
+#def max_van_3()
+
+
+
+def reverse_string(string):
+    a = ""
+    b = ""
+    for i in string:
+        a = i
+        a += b
+        b = a
+    return b
+print(reverse_string("woord"))
+
+
+
+
+
+
+    
+
+
+    
+
+
+
 
     
