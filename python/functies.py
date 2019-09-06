@@ -73,11 +73,11 @@ def priemgetal(num):
         for i in range(2,num):
             if num % i == 0:
                 return False
-            else:
-                return True
+        else:
+            return True
     else:
         return False
-#print(priemgetal(300))
+print(priemgetal(1500000000000001))
 
 
 def palindrome(string):
@@ -92,7 +92,7 @@ def palindrome(string):
     else:
         return False
 
-print(palindrome("lepel"))
+#print(palindrome("lepel"))
 
 
 
