@@ -10,18 +10,18 @@ def readfile():
             dictionary[woord1] = woord2
     return dictionary
 
-print(readfile())
+allenamen = readfile()
 
 def menu():
     print("Dit is een test om te kijken wat populairder is, kat of hond.")
     menu.naam = str(input("voer hier je naam in: "))
 
-menu()
+
 
 def verwerken():
     allenamen[menu.naam] = ""
 
-verwerken()
+
 
 def keuze():
     kies = str(input("\nkies kat of hond: "))
@@ -36,12 +36,26 @@ def keuze():
 
 
 
-a = keuze()    
+def addtofilehond(newkey):
+    with open('filenaam.txt', 'a') as f:
+        f.write(newkey + "=" + "hond" + "\n")
+
+def addtofilekat(newkey):
+    with open('filenaam.txt', 'a') as f:
+        f.write(newkey + "=" + "kat" + "\n")
+
+menu()
+verwerken()
+a = keuze()
+
 if a == "hond":
-    allenamen[menu.naam] = "hond"
+    addtofilehond(menu.naam)
     
 elif a == "kat":
-    allenamen[menu.naam] = "kat"
+    addtofilekat(menu.naam)
+
+
+
 
 
 
