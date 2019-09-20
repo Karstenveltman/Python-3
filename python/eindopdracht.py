@@ -31,9 +31,15 @@ def keuze():
     elif kies == "kat":
         print("goeie keuze")
         return "kat"
-    else:
-        keuze()
-
+    while kies != "hond" and "kat":
+        kies = str(input("\nkies kat of hond: "))
+        if kies == "hond":
+            print("minder goeie keuze")
+            return "hond"
+        elif kies == "kat":
+            print("goeie keuze")
+            return "kat"
+        
 
 
 def addtofilehond(newkey):
