@@ -1,3 +1,5 @@
+stoppen = False
+vragenstoppen = ""
 def readfile():
     with open("filenaam.txt") as f:
       bestandsdata = f.read().split('\n')
@@ -50,15 +52,22 @@ def addtofilekat(newkey):
     with open('filenaam.txt', 'a') as f:
         f.write(newkey + "=" + "kat" + "\n")
 
-menu()
-verwerken()
-a = keuze()
+while stoppen == False:
+    menu()
+    verwerken()
+    a = keuze()
 
-if a == "hond":
-    addtofilehond(menu.naam)
-    
-elif a == "kat":
-    addtofilekat(menu.naam)
+    if a == "hond":
+        addtofilehond(menu.naam)
+        
+    elif a == "kat":
+        addtofilekat(menu.naam)
+        
+    vragenstoppen = str(input("wil je stoppen? "))
+    if vragenstoppen == "ja":
+        stoppen = True
+    else:
+        stoppen = False
 
 
 
